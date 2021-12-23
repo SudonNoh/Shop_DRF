@@ -16,18 +16,6 @@ class User(AbstractBaseUser, PermissionsMixin, TimestampedModel):
     username = models.CharField(max_length=255, unique=True)
     email = models.EmailField(db_index=True, unique=True)
     phone_number = models.CharField(max_length=13) #010-9999-9999
-    team = models.CharField(
-        max_length=255,
-        choices=[
-        ('Adidas', '아디다스'), 
-        ('Nike', '나이키'), 
-        ('NewBalance', '뉴발란스'),
-        ('Customer', 'Customer'),
-        ('Admin', 'Admin')
-        ], 
-        default='Customer'
-        )
-    is_member = BooleanField(default=False)
     is_active = BooleanField(default=True)
     is_staff = BooleanField(default=False)
     

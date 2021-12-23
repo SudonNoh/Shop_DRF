@@ -40,8 +40,6 @@ class UserManager(BaseUserManager):
         # 관리자로 지정
         user.is_superuser = True
         user.is_staff = True
-        user.is_member = True
-        user.team = 'Admin'
         user.save()
         
         return user
