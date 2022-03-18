@@ -1,3 +1,6 @@
+# authentication > api > serializers.py
+
+from ipaddress import collapse_addresses
 from django.contrib.auth import authenticate
 from django.utils import timezone
 from rest_framework import serializers
@@ -70,3 +73,4 @@ class LoginSerializer(serializers.Serializer):
             'username': user.username,
             'last_login': user.last_login,
         }
+    

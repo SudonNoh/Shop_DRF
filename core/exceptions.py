@@ -1,3 +1,5 @@
+# core > exceptions.py
+
 from rest_framework.views import exception_handler
 
 
